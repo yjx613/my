@@ -28,7 +28,7 @@ $(window).scroll(function(){
 	}else if($(window).scrollTop()<40){
 		$(".head_fixed").addClass("dohead").removeClass("head_fixed");
 		$(".dohead").css("position","")
-		$(".head_logo").children("img").attr("src", "logo.gif" );
+		$(".head_logo").children("img").attr("src", "img/logo.gif" );
 	}
 })
 
@@ -101,7 +101,7 @@ $(function(){
 
 
 $(function(){
-	var starttime = new Date("2018/12/2 18:55:00");
+	var starttime = new Date("2018/12/22 18:55:00");
 	setInterval(function () {
 	var nowtime = new Date();
 	var time = starttime - nowtime;
@@ -197,7 +197,6 @@ function allbanner(){
 	var index=0;
 	var $dlist=$(".girl_right>div");
 	var $ob=$(".banop li")
-	console.log($dlist)
 	timer = setInterval( function(){
 		index++;
 		autoplay();
@@ -216,7 +215,7 @@ function allbanner(){
 		timer = setInterval( function(){
 		index++;
 		autoplay();
-	},4000);
+	},3000);
 	})
 	$ob.hover(function(){
 		clearInterval(timer);
@@ -226,7 +225,24 @@ function allbanner(){
 		timer = setInterval( function(){
 		index++;
 		autoplay();
-	},4000);
+	},3000);
 	})
 }
-allbanner()
+allbanner();
+
+
+
+function cont(){
+	var $olist=$(".indexlefts li")
+	console.log($olist)
+	var index=$(this).index()
+	$olist.click(function(){
+		if(index==0){
+			alert()
+//			$("html,body").stop().animate( { "scrollTop" : "500" } , 1000 );
+		}
+	})
+	
+	
+}
+cont()
